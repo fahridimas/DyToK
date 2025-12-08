@@ -1,0 +1,14 @@
+# Experiments
+*.mp4
+*logs*/
+*results*/
+.cache/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info
+dist/
+
+# VSCode
+.vscode/

@@ -1,0 +1,39 @@
+[tool.black]
+line-length = 240
+
+[build-system]
+requires = ["setuptools>=62.6"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lmms_eval_dytok"
+version = "0.3.0+dytok"  # Streamlined DyTok-specific version based on upstream v0.3.0
+authors = [
+    { name = "LMMMs-Lab Evaluation Team", email = "lmms-lab@outlook.com" },
+]
+maintainers = [
+    { name = "Yulin Li", email = "yulin@stu.hit.edu.cn" },
+]
+description = "Streamlined LMMs-Eval tailored for DyTok evaluation, retaining only essential components for focused and lightweight usage"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+"Homepage" = "https://dytok.github.io"
+"Repository" = "https://github.com/yu-lin-li/DyToK/tree/main/eval/lmms_eval"
+"Upstream" = "https://github.com/EvolvingLMMs-Lab/lmms-eval"
+
+[tool.setuptools.packages.find]
+include = ["lmms_eval*"]
+
+[project.scripts]
+lmms-eval = "lmms_eval.__main__:cli_evaluate"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }

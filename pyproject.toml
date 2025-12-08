@@ -1,0 +1,29 @@
+[tool.black]
+line-length = 240
+
+[build-system]
+requires = ["setuptools>=62.6"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dytok"
+version = "0.1.0"
+authors = [
+    { name = "Yulin Li", email = "yulin@stu.hit.edu.cn" },
+]
+description = "A training-free compression paradigm that dynamically adjusts per-frame token retention ratios based on LLM's keyframe prior"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+
+[project.urls]
+"Homepage" = "https://dytok.github.io"
+"Repository" = "https://github.com/yu-lin-li/DyToK"
+"Bug Tracker" = "https://github.com/yu-lin-li/DyToK/issues"
+
+[tool.setuptools.packages.find]
+include = ["dytok*"]
